@@ -3,6 +3,7 @@
 ![MCP Trakt](https://img.shields.io/badge/MCP-Trakt-ff69b4)
 ![Built with Cursor](https://img.shields.io/badge/Built%20with-Cursor-blue)
 ![Powered by Claude](https://img.shields.io/badge/Powered%20by-Claude%20Sonnet-blueviolet)
+[![smithery badge](https://smithery.ai/badge/@himichaelroberts/trakt_mcpserver)](https://smithery.ai/server/@himichaelroberts/trakt_mcpserver)
 
 A Model Context Protocol (MCP) server that creates a bridge between AI language models and the Trakt.tv API, allowing LLMs to access real-time entertainment data and personal Trakt viewing history. Built with a domain-focused architecture using FastMCP, providing clean separation of concerns across authentication, shows, movies, user data, comments, search, and check-in functionality.
 
@@ -273,6 +274,15 @@ You can log out at any time using the `clear_auth` tool.
 
 ## 🚀 Setup
 
+### Installing via Smithery
+
+To install trakt_mcpserver for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@himichaelroberts/trakt_mcpserver):
+
+```bash
+npx -y @smithery/cli install @himichaelroberts/trakt_mcpserver --client claude
+```
+
+### Installing Manually
 1. **Clone this repository**
    ```bash
    git clone https://github.com/yourusername/mcp-trakt.git
