@@ -1,0 +1,24 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'python', args: ['server.py'], env: { TRAKT_CLIENT_ID: config.traktClientId, TRAKT_CLIENT_SECRET: config.traktClientSecret } })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - traktClientId
+      - traktClientSecret
+    properties:
+      traktClientId:
+        type: string
+        description: Trakt API Client ID
+      traktClientSecret:
+        type: string
+        description: Trakt API Client Secret
+  exampleConfig:
+    traktClientId: YOUR_TRAKT_CLIENT_ID
+    traktClientSecret: YOUR_TRAKT_CLIENT_SECRET
